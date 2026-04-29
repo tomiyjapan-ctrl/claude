@@ -31,3 +31,35 @@ This repository contains a single PowerShell installer script (`install.ps1`) fo
 6. Cleans up the temporary binary
 
 The script requires 64-bit Windows and uses `$ErrorActionPreference = "Stop"` throughout.
+
+## Transcription (`transcribe.ps1`)
+
+Wrapper around local Whisper for Japanese audio/video transcription. Default model: `medium`, default language: `Japanese`.
+
+### Usage
+
+```powershell
+# Basic (medium model, Japanese)
+.\transcribe.ps1 video.mp4
+
+# Specify language
+.\transcribe.ps1 video.mp4 -Language English
+
+# Specify output directory
+.\transcribe.ps1 video.mp4 -OutputDir C:\Users\tomiy531\Desktop
+```
+
+### Parameters
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `-File` | (required) | Audio/video file to transcribe |
+| `-Model` | `medium` | Whisper model size (tiny/small/medium/large) |
+| `-Language` | `Japanese` | Language of the audio |
+| `-OutputDir` | `.` | Directory to save transcript files |
+
+### Notes
+
+- First run downloads the medium model (~1.5GB) automatically
+- Requires Python 3.11 and `openai-whisper` (already installed)
+- Output formats: `.txt`, `.srt`, `.vtt`, `.tsv`, `.json`
