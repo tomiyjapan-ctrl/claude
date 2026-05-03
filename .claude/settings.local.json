@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(powershell -ExecutionPolicy Bypass -File \"$env:USERPROFILE\\\\.claude\\\\skills\\\\video-use\\\\transcribe.ps1\" -File \"C:\\\\Users\\\\tomiy531\\\\Videos\\\\動画素材\\\\20260429-204353.mp4\" -OutputDir \"C:\\\\Users\\\\tomiy531\\\\Videos\\\\動画素材\")"
+    ]
+  }
+}
