@@ -70,3 +70,4 @@ Wrapper around local Whisper for Japanese audio/video transcription. Default mod
 
 - 新しいチャンネルは `channels/_template/` を `channels/<channel-key>/` へ複製して作る（未確定値は「未設定」のまま）
 - 制作機能の接続状況は docs/video-capabilities.md に記録する
+- 利用者向けの命令文集は docs/video-commands.md
