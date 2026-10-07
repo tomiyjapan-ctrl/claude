@@ -1,0 +1,18 @@
+{
+  "channel_key": null,
+  "video_id": null,
+  "stage": "setup",
+  "revision": null,
+  "input_hash": null,
+  "job_id": null,
+  "status": "not_started",
+  "outputs": [],
+  "approvals": [],
+  "qa_status": "not_reviewed",
+  "publish_at": null,
+  "timezone": null,
+  "youtube_video_id": null,
+  "last_error": null,
+  "next_action": "channel-config.md の未設定項目を利用者に確認する",
+  "updated_at": "2026-10-07T00:00:00+09:00"
+}

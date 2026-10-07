@@ -63,3 +63,10 @@ Wrapper around local Whisper for Japanese audio/video transcription. Default mod
 - First run downloads the medium model (~1.5GB) automatically
 - Requires Python 3.11 and `openai-whisper` (already installed)
 - Output formats: `.txt`, `.srt`, `.vtt`, `.tsv`, `.json`
+
+## 動画チャンネルの制作・運用
+
+動画の制作・運用前に docs/video-channel-manual.md と当該チャンネルの設定・台帳（channels/<channel-key>/）を読み、制作は docs/video-production-rules.md に従う。上位指示と利用者の最新指定を優先する。
+
+- 新しいチャンネルは `channels/_template/` を `channels/<channel-key>/` へ複製して作る（未確定値は「未設定」のまま）
+- 制作機能の接続状況は docs/video-capabilities.md に記録する
