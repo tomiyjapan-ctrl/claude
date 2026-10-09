@@ -63,3 +63,17 @@ Wrapper around local Whisper for Japanese audio/video transcription. Default mod
 - First run downloads the medium model (~1.5GB) automatically
 - Requires Python 3.11 and `openai-whisper` (already installed)
 - Output formats: `.txt`, `.srt`, `.vtt`, `.tsv`, `.json`
+
+## Folder size report (`folder-size.ps1`)
+
+Finds what is using space in a folder. Defaults to the Documents folder (follows OneDrive redirection).
+
+```powershell
+# Documents folder, top 20 of each list
+.\folder-size.ps1
+
+# Another folder / more rows
+.\folder-size.ps1 "C:\Users\tomiy531\Documents\SomeFolder" -Top 50
+```
+
+Prints total size, top-level folder breakdown, largest files, and size by file type. Skips junctions (e.g. `My Music`) to avoid double counting, and reports OneDrive online-only files separately since they use no local disk.
