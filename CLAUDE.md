@@ -47,6 +47,9 @@ Wrapper around local Whisper for Japanese audio/video transcription. Default mod
 
 # Specify output directory
 .\transcribe.ps1 video.mp4 -OutputDir C:\Users\tomiy531\Desktop
+
+# Use faster-whisper (≈4x faster, same accuracy, VAD filter on)
+.\transcribe.ps1 video.mp4 -Engine faster
 ```
 
 ### Parameters
@@ -57,9 +60,11 @@ Wrapper around local Whisper for Japanese audio/video transcription. Default mod
 | `-Model` | `medium` | Whisper model size (tiny/small/medium/large) |
 | `-Language` | `Japanese` | Language of the audio |
 | `-OutputDir` | `.` | Directory to save transcript files |
+| `-Engine` | `whisper` | `whisper` (openai-whisper) or `faster` (faster-whisper via `whisper-ctranslate2`) |
 
 ### Notes
 
 - First run downloads the medium model (~1.5GB) automatically
 - Requires Python 3.11 and `openai-whisper` (already installed)
+- `-Engine faster` requires `pip install whisper-ctranslate2`; it downloads its own converted models from Hugging Face on first run and skips silent sections (`--vad_filter True`)
 - Output formats: `.txt`, `.srt`, `.vtt`, `.tsv`, `.json`
