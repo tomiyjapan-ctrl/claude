@@ -63,3 +63,14 @@ Wrapper around local Whisper for Japanese audio/video transcription. Default mod
 - First run downloads the medium model (~1.5GB) automatically
 - Requires Python 3.11 and `openai-whisper` (already installed)
 - Output formats: `.txt`, `.srt`, `.vtt`, `.tsv`, `.json`
+
+## Memory diagnostics (`diagnose-memory.ps1`)
+
+Read-only diagnostic for a slow PC. Lists overall memory usage, top memory-consuming apps (grouped by name), current CPU hogs (5-second sample), startup apps, commonly heavy apps, and disk type/free space. Saves a report to the Desktop. Stops or changes nothing.
+
+```powershell
+.\diagnose-memory.ps1
+.\diagnose-memory.ps1 -Top 30
+```
+
+The file is saved as UTF-8 with BOM so Windows PowerShell 5.1 reads the Japanese text correctly.
