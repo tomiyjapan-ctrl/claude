@@ -66,7 +66,7 @@ Wrapper around local Whisper for Japanese audio/video transcription. Default mod
 
 ## Memory diagnostics (`diagnose-memory.ps1`)
 
-Read-only diagnostic for a slow PC. Lists overall memory usage, top memory-consuming apps (grouped by name), current CPU hogs (5-second sample), startup apps, commonly heavy apps, and disk type/free space. Saves a report to the Desktop. Stops or changes nothing.
+Read-only diagnostic for a slow PC. Lists overall memory usage, top memory-consuming apps (grouped by name), a 5-second sample of CPU, disk busy %, hard page faults and per-process disk I/O, startup apps, commonly heavy apps, disk type/free space, network drive status, thumbnail cache size, Explorer/image viewer state, and Windows Update activity. Saves a report to the Desktop. Stops or changes nothing.
 
 ```powershell
 .\diagnose-memory.ps1
